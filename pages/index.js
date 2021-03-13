@@ -1,12 +1,13 @@
-import React from 'react'
+import React from 'react';
+import Navbar from '../components/Navbar';
 
 function Home() {
   return (
-    <div className="bg-black w-full h-full flex flex-col items-center">
-      <h1 className="text-gray-50 font-bold text-9xl chromatic">FULLSTACK <br/> DEVELOPER</h1>
-      
-    </div>
-  )
+    <main className="w-full min-h-full flex flex-col items-center">
+      <Navbar />
+      <h1 className="font-pop text-white">Olá Mundo</h1>
+    </main>
+  );
 }
 
-export default Home
+export default Home;

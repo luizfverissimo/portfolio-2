@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +7,14 @@
 .chromatic {
   text-shadow: 1px 1px #F82759, -1px -1px #01FFF0;
 }
+
+body {
+  background-color: #1c1c1c;
+	width: 100vw;
+	min-height: 100vh;
+}
+
+.hover-svg:hover {
+	color: #F82759
+}
+
