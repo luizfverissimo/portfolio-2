@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.chromatic {
+  text-shadow: 1px 1px #F82759, -1px -1px #01FFF0;
+}

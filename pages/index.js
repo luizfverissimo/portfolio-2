@@ -2,8 +2,8 @@ import React from 'react'
 
 function Home() {
   return (
-    <div className="">
-      <h1 className="text-red-600 font-bold text-6xl">Olá Mundo!</h1>
+    <div className="bg-black w-full h-full flex flex-col items-center">
+      <h1 className="text-gray-50 font-bold text-9xl chromatic">FULLSTACK <br/> DEVELOPER</h1>
       
     </div>
   )
