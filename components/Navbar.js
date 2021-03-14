@@ -1,15 +1,18 @@
+import Link from 'next/link';
 import React from 'react';
 
 function Navbar() {
   return (
     <header className='w-full max-w-screen-xl flex justify-between py-6 '>
-      <a href='#'>
+      <Link href="/">
+      <a>
         <img
           src='/lf_verissimo_logo_dark.svg'
           className='w-40 transform transition-all hover:-translate-y-1'
           alt='LF Verissimo logo'
         />
       </a>
+      </Link>
 
       <div className='flex justify-center items-center'>
         <a  rel="external" href="https://github.com/luizfverissimo" target="_blank" rel="noopener">
