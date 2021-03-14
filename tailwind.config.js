@@ -9,7 +9,11 @@ module.exports = {
       colors: {
         "black-theme": "#1c1c1c",
         "white-theme": "#f1f1f1",
-        "pink-theme": "#FD3A69"
+        "pink-theme": "#FD3A69",
+        "gray-theme": "#858585"
+      },
+      zIndex: {
+        "under": -1
       }
     },
   },

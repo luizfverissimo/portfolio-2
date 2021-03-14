@@ -2,7 +2,7 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <nav className='w-full max-w-screen-xl flex justify-between py-6 '>
+    <header className='w-full max-w-screen-xl flex justify-between py-6 '>
       <a href='#'>
         <img
           src='/lf_verissimo_logo_dark.svg'
@@ -56,7 +56,7 @@ function Navbar() {
         </svg>
         </a>
       </div>
-    </nav>
+    </header>
   );
 }
 

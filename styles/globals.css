@@ -4,15 +4,21 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+	background-color: #1c1c1c;
+	/* background: radial-gradient(46.82% 50.25% at 50% 49.75%, #1C1C1C 0%, #000000 100%); */
+	width: 100vw;
+	min-height: 100vh;
+}
+
 .chromatic {
   text-shadow: 1px 1px #F82759, -1px -1px #01FFF0;
 }
 
-body {
-  background-color: #1c1c1c;
-	width: 100vw;
-	min-height: 100vh;
+.chromatic-box {
+	box-shadow: 1px 1px 0px 0px #F82759, -1px -1px 0px 0px #01FFF0;
 }
+
 
 .hover-svg:hover {
 	color: #F82759
