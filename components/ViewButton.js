@@ -4,7 +4,7 @@ import React from 'react';
 function CodeButton({ slug }) {
   return (
     <Link href='/projects/project/[slug]' as={`/projects/project/${slug}`}>
-      <a className='group mt-7 font-pop font-bold text-white-theme text-xl flex items-center transition-all hover:text-pink-theme'>
+      <a className='group mt-7 w-max font-pop font-bold text-white-theme text-xl flex items-center transition-all hover:text-pink-theme'>
         <svg
           className='mr-2 fill-current text-white-theme transition-all group-hover:text-pink-theme'
           width='24'

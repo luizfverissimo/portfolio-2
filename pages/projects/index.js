@@ -31,7 +31,6 @@ const Projects = ({ projectsList }) => {
         <h1 className='chromatic font-pop font-bold text-white-theme text-8xl'>
           PROJECTS
         </h1>
-        <p className='font-pop text-2xl font-light text-gray-theme'>Filter</p>
       </div>
 
       <section className='w-full max-w-screen-xl flex flex-auto mt-10 overflow-x-scroll'>

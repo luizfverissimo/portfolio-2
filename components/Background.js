@@ -5,7 +5,7 @@ function Background() {
     <img
       src='/bg.png'
       alt='background'
-      className='z-under fixed top-0 left-0 opacity-60'
+      className='z-under w-full h-full fixed top-0 left-0 opacity-60 object-cover'
     />
   );
 }

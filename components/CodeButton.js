@@ -3,7 +3,7 @@ import React from 'react';
 function CodeButton({ href }) {
   return (
     <a
-      className='group mt-1 font-pop font-bold text-white-theme text-xl flex items-center transition-all hover:text-pink-theme'
+      className='group w-max mt-1 font-pop font-bold text-white-theme text-xl flex items-center transition-all hover:text-pink-theme'
       rel='external'
       href={href}
       target='_blank'
