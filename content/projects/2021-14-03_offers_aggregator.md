@@ -18,4 +18,4 @@ images:
   - /img/offer/8.png
   - /img/offer/9.png
 ---
-<a class="transition-all hover:text-pink-theme" href="http://offers-aggregator.vercel.app/admin" rel='external' target='_blank' rel='noopener'>Open ADMIN Dashboard</a>
+<a class="transition-all underline hover:text-pink-theme" href="http://offers-aggregator.vercel.app/admin" rel='external' target='_blank' rel='noopener'>Open ADMIN Dashboard</a>
