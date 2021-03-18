@@ -8,14 +8,51 @@ import { init } from 'emailjs-com';
 import Background from '../components/Background';
 import FooterMenu from '../components/FooterMenu';
 import Navbar from '../components/Navbar';
+import validateContact from '../utils/validation';
 
 function Contact() {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
   const [isVerified, setIsVerified] = useState(false);
-  const [erro, setErro] = useState('Mensagem de erro!')
+  const [status, setStatus] = useState('');
 
   useEffect(() => {
     init(`${process.env.NEXT_PUBLIC_EMAILJS_USER}`);
   }, []);
+
+  const handleSubmitContactForm = async (event) => {
+    event.preventDefault();
+
+    const res = validateContact(name, email, message);
+
+    if (!res.status) {
+      setStatus(res.message);
+      return;
+    }
+
+    if (!isVerified) {
+      setStatus('Verify reCaptcha field.');
+      return;
+    }
+
+    try {
+      setStatus('Sending message...');
+      await emailjs.send('service_bsg0df3', 'template_xwi0imb', {
+        from_name: name,
+        from_email: email,
+        message: message
+      });
+
+      setStatus('The message was sent, I will reply you soon!');
+      setName('');
+      setEmail('');
+      setMessage('');
+    } catch (err) {
+      console.log(err);
+      setStatus('An Error occurred, please resubmit.');
+    }
+  };
 
   const recaptchaVerify = () => {
     console.log('verificou');
@@ -74,6 +111,8 @@ function Contact() {
             <input
               type='text'
               className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2  outline-none'
+              value={name}
+              onChange={(e) => setName(e.target.value)}
             ></input>
             <legend className='mt-8 font-pop font-bold text-2xl text-white-theme'>
               E-mail
@@ -81,6 +120,8 @@ function Contact() {
             <input
               type='text'
               className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
             ></input>
             <legend className='mt-8 font-pop font-bold text-2xl text-white-theme'>
               Message
@@ -88,11 +129,11 @@ function Contact() {
             <textarea
               type='text'
               className='w-full mt-2 h-40 transition-all bg-transparent border-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
+              value={message}
+              onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <div className='w-full mt-4 flex flex-col items-center'>
-              <p className='font-pop h-5 text-xl text-pink-theme'>
-                {erro}
-              </p>
+              <p className='font-pop h-5 text-xl text-pink-theme'>{status}</p>
               <div className='w-full mt-8 flex justify-between'>
                 <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
@@ -100,7 +141,22 @@ function Contact() {
                   theme='dark'
                   hl='en'
                 />
-                <button className="font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1">Contact!</button>
+                <button
+                  onClick={handleSubmitContactForm}
+                  className='group flex outline-none items-center font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1'
+                >
+                  <svg
+                    className='mr-2 fill-current outline-none text-white-theme transition-all group-hover:text-pink-theme'
+                    width='24'
+                    height='24'
+                    viewBox='0 0 29 28'
+                    fill='none'
+                    xmlns='http://www.w3.org/2000/svg'
+                  >
+                    <path d='M27.6401 12.1428L2.14011 0.142751C1.88333 0.021926 1.59755 -0.0235801 1.31595 0.0115168C1.03434 0.0466137 0.768474 0.160874 0.54921 0.341028C0.329946 0.521182 0.166286 0.75984 0.0772323 1.02929C-0.0118211 1.29873 -0.0226134 1.58792 0.0461091 1.86325L1.86411 9.13675L13.5011 13.5003L1.86411 17.8638L0.0461091 25.1373C-0.0239064 25.4128 -0.0140149 25.7026 0.0746267 25.9727C0.163268 26.2428 0.326995 26.4821 0.546654 26.6626C0.766313 26.8431 1.03282 26.9573 1.31501 26.9918C1.59719 27.0264 1.88339 26.9799 2.14011 26.8578L27.6401 14.8578C27.8978 14.7366 28.1157 14.5446 28.2683 14.3042C28.4209 14.0639 28.502 13.785 28.502 13.5003C28.502 13.2155 28.4209 12.9366 28.2683 12.6963C28.1157 12.4559 27.8978 12.2639 27.6401 12.1428Z' />
+                  </svg>
+                  Contact!
+                </button>
               </div>
             </div>
           </div>
