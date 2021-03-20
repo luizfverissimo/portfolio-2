@@ -105,28 +105,40 @@ function Contact() {
 
         <section className='w-full max-w-screen-xl flex justify-between items-center'>
           <div className='w-1/2 flex flex-col items-start justify-start'>
-            <legend className='mt-8 font-pop font-bold text-2xl text-white-theme'>
+            <label
+              for='Name'
+              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+            >
               Name
-            </legend>
+            </label>
             <input
+              id='Name'
               type='text'
               className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2  outline-none'
               value={name}
               onChange={(e) => setName(e.target.value)}
             ></input>
-            <legend className='mt-8 font-pop font-bold text-2xl text-white-theme'>
+            <label
+              for='Email'
+              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+            >
               E-mail
-            </legend>
+            </label>
             <input
+              id='Email'
               type='text'
               className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             ></input>
-            <legend className='mt-8 font-pop font-bold text-2xl text-white-theme'>
+            <label
+              for='Message'
+              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+            >
               Message
-            </legend>
+            </label>
             <textarea
+              id='Message'
               type='text'
               className='w-full mt-2 h-40 transition-all bg-transparent border-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
               value={message}

@@ -10,7 +10,7 @@ function FooterMenu() {
         </a>
       </Link>
 
-      <Link href="/">
+      <Link href="/about">
         <a className="chromatic-box px-6 py-3 mr-8 bg-white-theme font-pop font-bold text-black-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1">
           About
         </a>
