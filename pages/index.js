@@ -40,20 +40,20 @@ function Home() {
           content='LF Verissimo personal portfolio, front-end developer, solving problems through code.'
         />
       </Head>
-      <main className='w-full min-h-full flex flex-col items-center'>
+      <main className='w-full h-screen flex flex-col items-center'>
         <Background />
         <Navbar />
-        <section className='w-full max-w-screen-xl flex flex-col justify-center'>
-          <p className='font-pop text-4xl text-white mt-40'>
+        <section className='w-full h-full sm:max-w-screen-xl px-4 xl:px-0 flex flex-col justify-center xl:justify-start'>
+          <p className='font-pop text-xl sm:text-4xl text-white mt-0 xl:mt-20 2xl:mt-40'>
             Hi,
             <br /> I'm <span className='text-pink-theme'>LF Verissimo</span>!
           </p>
-          <h1 className='chromatic font-pop font-bold text-white-theme text-9xl'>
+          <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-9xl'>
             FRONT-END
             <br />
             DEVELOPER
           </h1>
-          <h2 className='mt-12 font-pop font-light text-gray-theme text-4xl'>
+          <h2 className='mt-12 font-pop font-light text-gray-theme text-xl sm:text-4xl'>
             JavaScript, Node.js, React.js, React Native and Next.js
           </h2>
         </section>

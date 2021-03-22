@@ -3,12 +3,12 @@ import React from 'react';
 
 function Navbar() {
   return (
-    <header className='w-full max-w-screen-xl flex justify-between py-6 '>
+    <header className='w-full max-w-screen-xl flex justify-between items-center py-6 px-6 xl:px-0'>
       <Link href="/">
       <a>
         <img
           src='/lf_verissimo_logo_dark.svg'
-          className='w-40 transform transition-all hover:-translate-y-1'
+          className='w-1/2 sm:w-40 transform transition-all hover:-translate-y-1'
           alt='LF Verissimo logo'
         />
       </a>
