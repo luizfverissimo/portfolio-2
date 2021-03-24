@@ -97,56 +97,56 @@ function Contact() {
       <main className='w-full min-h-full flex flex-col items-center'>
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between items-end'>
-          <h1 className='chromatic font-pop font-bold text-white-theme text-8xl'>
+        <div className='w-full max-w-screen-xl flex justify-between items-end px-4 xl:px-0'>
+          <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             CONTACT
           </h1>
         </div>
 
-        <section className='w-full max-w-screen-xl flex justify-between items-center'>
-          <div className='w-1/2 flex flex-col items-start justify-start'>
+        <section className='w-full max-w-screen-xl flex justify-between items-center mb-20 sm:mb-0'>
+          <div className='w-full px-4 xl:px-0 sm:w-1/2 flex flex-col items-start justify-start'>
             <label
               for='Name'
-              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+              className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               Name
             </label>
             <input
               id='Name'
               type='text'
-              className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2  outline-none'
+              className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-lg sm:text-xl p-2  outline-none'
               value={name}
               onChange={(e) => setName(e.target.value)}
             ></input>
             <label
               for='Email'
-              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+              className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               E-mail
             </label>
             <input
               id='Email'
               type='text'
-              className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
+              className='w-full transition-all bg-transparent border-b-2 focus:border-pink-theme font-pop font-light text-white text-lg sm:text-xl p-2 outline-none'
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <label
               for='Message'
-              className='mt-8 font-pop font-bold text-2xl text-white-theme'
+              className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               Message
             </label>
             <textarea
               id='Message'
               type='text'
-              className='w-full mt-2 h-40 transition-all bg-transparent border-2 focus:border-pink-theme font-pop font-light text-white text-xl p-2 outline-none'
+              className='w-full mt-2 h-15 sm:h-40  transition-all bg-transparent border-2 focus:border-pink-theme font-pop font-light rounded-xl text-white text-lg sm:text-xl p-2 outline-none'
               value={message}
               onChange={(e) => setMessage(e.target.value)}
             ></textarea>
             <div className='w-full mt-4 flex flex-col items-center'>
-              <p className='font-pop h-5 text-xl text-pink-theme'>{status}</p>
-              <div className='w-full mt-8 flex justify-between'>
+              <p className='font-pop h-auto sm:h-5 text-lg sm:text-xl text-pink-theme'>{status}</p>
+              <div className='w-full mt-4 sm:mt-8 flex flex-col sm:flex-row justify-start sm:justify-between items-center '>
                 <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
                   onChange={recaptchaVerify}
@@ -155,7 +155,7 @@ function Contact() {
                 />
                 <button
                   onClick={handleSubmitContactForm}
-                  className='group flex outline-none items-center font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1'
+                  className='group flex outline-none mt-5 sm:mt-0 items-center font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1'
                 >
                   <svg
                     className='mr-2 fill-current outline-none text-white-theme transition-all group-hover:text-pink-theme'

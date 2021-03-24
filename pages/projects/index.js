@@ -73,7 +73,7 @@ const Projects = ({ projectsList }) => {
           </h1>
         </div>
 
-        <section className='w-full max-w-screen-xl h-full sm:h-auto flex flex-auto mt-5 lg:mt-10'>
+        <section className='w-full h-full sm:h-auto flex flex-auto mt-5 lg:mt-10'>
           {!isMobile && (
             <Carousel
               defaultControlsConfig={{
@@ -108,7 +108,7 @@ const Projects = ({ projectsList }) => {
                 return (
                   <article
                     key={index}
-                    className='w-full bg-black-theme h-auto p-4 sm:p-8 border rounded-xl border-white-theme flex flex-col items-start justify-between relative shadow-2xl'
+                    className='w-full bg-black-theme h-auto p-4 sm:p-8 border rounded-xl border-gray-theme flex flex-col items-start justify-between relative shadow-2xl'
                   >
                     <div className='w-full flex flex-col'>
                       <h3 className='w-full font-pop font-light text-pink-theme text-lg sm:text-xl'>
@@ -151,7 +151,7 @@ const Projects = ({ projectsList }) => {
                 return (
                   <article
                     key={index}
-                    className='w-full bg-black-theme h-auto p-4 my-5 sm:p-8 border rounded-xl border-white-theme flex flex-col items-start justify-between relative shadow-2xl'
+                    className='w-full bg-black-theme h-auto p-4 my-5 sm:p-8 border rounded-xl border-gray-theme flex flex-col items-start justify-between relative shadow-2xl'
                   >
                     <div className='w-full flex flex-col'>
                       <h3 className='w-full font-pop font-light text-pink-theme text-lg sm:text-xl'>
