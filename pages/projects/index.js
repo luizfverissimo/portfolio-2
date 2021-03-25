@@ -124,7 +124,6 @@ const Projects = ({ projectsList }) => {
               slidesToShow={4}
               transitionMode={'scroll3d'}
               cellSpacing={100}
-              enableKeyboardControls
               slideWidth='400px'
             >
               {projectsList.map((project, index) => {
