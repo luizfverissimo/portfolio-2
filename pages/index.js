@@ -53,8 +53,11 @@ function Home() {
             <br />
             DEVELOPER
           </h1>
-          <h2 className='mt-12 font-pop font-light text-gray-theme text-xl sm:text-4xl'>
+          <h2 className='mt-12 font-pop font-light text-gray-theme text-xl sm:text-3xl'>
             JavaScript, Node.js, React.js, React Native and Next.js
+          </h2>
+          <h2 className='mt-12 font-pop font-bold text-pink-theme text-xl sm:text-4xl'>
+            &darr; See my projects!
           </h2>
         </section>
         <FooterMenu />

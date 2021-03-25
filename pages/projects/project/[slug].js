@@ -51,36 +51,40 @@ const Project = ({ project }) => {
       <main className='w-full min-h-full flex flex-col items-center'>
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between items-end'>
-          <h1 className='chromatic font-pop font-bold text-white-theme text-8xl'>
+        <div className='w-full max-w-screen-xl flex justify-between items-end px-4 sm:px-0'>
+          <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             PROJECTS
           </h1>
         </div>
 
-        <section className='w-full max-w-screen-xl flex justify-between items-center'>
-          <div className='flex flex-col mt-6 mr-5'>
-            <p className='font-pop font-light text-pink-theme text-2xl'>
+        <section className='w-full max-w-screen-xl mb-20 sm:mb-0 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-0'>
+          <div className='flex flex-col mt-6 mr-0 mb-10 sm:mb-0 sm:mr-5'>
+            <p className='font-pop font-light text-pink-theme text-xl sm:text-2xl'>
               {attributes.type}
             </p>
-            <h2 className='font-pop font-bold text-white-theme text-4xl'>
+            <h2 className='font-pop font-bold text-white-theme text-2xl sm:text-4xl'>
               {attributes.title}
             </h2>
-            <p className='mt-6 font-pop font-light text-gray-theme text-2xl'>
+            <p className='mt-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'>
               {attributes.desc}
             </p>
-            <p className='mt-6 font-pop font-light text-white-theme text-2xl'>
+            <p className='mt-6 font-pop font-light text-white-theme text-xl sm:text-2xl'>
               <strong className='font-bold'>Tech's</strong>
               <br />
               {attributes.tech}
             </p>
-            <p className='my-6 font-pop font-light text-gray-theme text-2xl'>
-              {attributes.extraInfo}
-            </p>
+            {attributes.extra && (
+              <>
+                <p className='my-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'>
+                  {attributes.extraInfo}
+                </p>
 
-            <div
-              className='my-6 font-pop font-light text-gray-theme text-2xl'
-              dangerouslySetInnerHTML={{ __html: html }}
-            ></div>
+                <div
+                  className='my-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'
+                  dangerouslySetInnerHTML={{ __html: html }}
+                ></div>
+              </>
+            )}
 
             <LaunchButton href={attributes.link} />
             <CodeButton href={attributes.codeLink} />

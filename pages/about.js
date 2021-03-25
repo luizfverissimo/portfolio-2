@@ -44,27 +44,27 @@ function About() {
       <main className='w-full min-h-full flex flex-col items-center'>
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between'>
-          <h1 className='chromatic font-pop font-bold text-white-theme text-8xl'>
+        <div className='w-full max-w-screen-xl flex justify-between px-4 xl:px-0'>
+          <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             ABOUT
           </h1>
         </div>
-        <section className='w-full max-w-screen-xl flex justify-between'>
-          <div className='w-1/2 flex flex-col items-start mt-12'>
-            <h2 className='font-pop text-3xl text-white-theme'>
+        <section className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-between px-4 xl:px-0'>
+          <div className='w-full sm:w-1/2 flex flex-col items-start mt-12'>
+            <h2 className='font-pop text-2xl sm:text-3xl text-white-theme'>
               Hi, my name is <strong>Luiz Fernando Verissimo</strong>,
             </h2>
-            <p className='font-pop font-light text-3xl text-gray-theme mt-6'>
+            <p className='font-pop font-light text-2xl sm:text-3xl text-gray-theme mt-6'>
               I’m a self-taught front-end JavaScript developer, a geek developer
               exploring programming dungeons!
             </p>
             <p className='font-pop text-2xl text-white-theme mt-6'>
               I am currently an front-end developer intern at the <a className="underline hover:text-pink-theme" href="https://mandarin.com.br" rel="external" target="_blank" rel="noopener">Mandarin agency</a>
             </p>
-            <h3 className='font-pop font-bold text-3xl text-pink-theme mt-12'>
+            <h3 className='font-pop font-bold text-2xl sm:text-3xl text-pink-theme mt-12'>
               What can I do for you?
             </h3>
-            <ul className='font-pop font-bold text-2xl text-white-theme ml-4 mt-4'>
+            <ul className='font-pop font-bold text-xl sm:text-2xl text-white-theme ml-4 mt-4'>
               <li>Fullstack projects (CRUD)</li>
               <li>Mobile apps</li>
               <li>Websites</li>
@@ -72,9 +72,9 @@ function About() {
               <li>E-mail template</li>
             </ul>
           </div>
-          <div className='w-1/2 flex flex-col items-end mt-12'>
+          <div className='w-full sm:w-1/2 flex flex-col items-end mt-12 mb-20 sm:mb-0'>
             <img src='/avatar.jpg' alt='LF Verissimo avatar' />
-            <p className='font-pop text-white-theme text-xl text-right mt-6'>
+            <p className='w-full font-pop text-white-theme text-lg sm:text-xl text-center sm:text-right mt-6'>
               <strong>Based in:</strong>
               <br />
               Londrina/PR - Brazil

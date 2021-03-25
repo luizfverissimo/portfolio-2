@@ -3,6 +3,7 @@ title: The Old Book
 type: Front-end
 desc: 📜 ScrollBook Manager for RPG, created with React.js, Next.js and Styled Components
 tech: HTML, CSS, JavaScript, Next.js, Axios, Axios and Styled-Components.
+extra: false
 extraInfo: ""
 codeLink: https://github.com/luizfverissimo/the-old-book
 link: https://the-old-book.vercel.app

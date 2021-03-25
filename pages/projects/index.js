@@ -67,10 +67,19 @@ const Projects = ({ projectsList }) => {
       <main className='w-full min-h-full flex flex-col items-center'>
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between items-end px-4 xl:px-0 '>
+        <div className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-between items-end px-4 xl:px-0 '>
           <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             PROJECTS
           </h1>
+          <a
+            className='font-pop transition-all mt-2 sm:mt-0 text-white-theme text-base sm:text-xl hover:text-pink-theme'
+            rel='external'
+            href='https://github.com/luizfverissimo?tab=repositories'
+            target='_blank'
+            rel='noopener'
+          >
+            All Projects on GITHUB &rarr;
+          </a>
         </div>
 
         <section className='w-full h-full sm:h-auto flex flex-auto mt-5 lg:mt-10'>
@@ -146,7 +155,7 @@ const Projects = ({ projectsList }) => {
             </Carousel>
           )}
           {isMobile && (
-            <div className="w-full h-auto flex flex-col mt-5 mb-20 px-5">
+            <div className='w-full h-auto flex flex-col mt-5 mb-20 px-5'>
               {projectsList.map((project, index) => {
                 return (
                   <article

@@ -3,6 +3,7 @@ title: Offers Aggregator
 type: Fullstack
 desc: 💸 FullStack application of an Offers/ Deal/ Coupons Aggregator. Created with Next,js
 tech: HTML, CSS, JavaScript, Sass, Next.js, Axios, Postgress and JWT.
+extra: true
 extraInfo: "To access the ADMIN dashboard, click here. login: user@test.com - password: 12345678"
 codeLink: https://github.com/luizfverissimo/offer-aggregator
 link: http://offers-aggregator.vercel.app
