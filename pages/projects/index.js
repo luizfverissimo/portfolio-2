@@ -2,12 +2,17 @@ import { useEffect, useState } from 'react';
 import Head from 'next/head';
 import Link from 'next/link';
 import Carousel from 'nuka-carousel';
+import { motion } from 'framer-motion';
 
 import Background from '../../components/Background';
 import FooterMenu from '../../components/FooterMenu';
 import Navbar from '../../components/Navbar';
 import CodeButton from '../../components/CodeButton';
 import ViewButton from '../../components/ViewButton';
+import {
+  animationChildVariants,
+  animationParentVariants
+} from '../../utils/animations';
 
 const importProjects = async () => {
   // https://webpack.js.org/guides/dependency-management/#requirecontext
@@ -64,14 +69,23 @@ const Projects = ({ projectsList }) => {
           content='Projects of LF Verissimo, front-end developer.'
         />
       </Head>
-      <main className='w-full min-h-full flex flex-col items-center'>
+      <motion.main
+        initial='hidden'
+        animate='show'
+        variants={animationParentVariants}
+        className='w-full min-h-full flex flex-col items-center'
+      >
         <Background />
         <Navbar />
         <div className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-between items-end px-4 xl:px-0 '>
-          <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
+          <motion.h1
+            variants={animationChildVariants}
+            className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'
+          >
             PROJECTS
-          </h1>
-          <a
+          </motion.h1>
+          <motion.a
+            variants={animationChildVariants}
             className='font-pop transition-all mt-2 sm:mt-0 text-white-theme text-base sm:text-xl hover:text-pink-theme'
             rel='external'
             href='https://github.com/luizfverissimo?tab=repositories'
@@ -79,7 +93,7 @@ const Projects = ({ projectsList }) => {
             rel='noopener'
           >
             All Projects on GITHUB &rarr;
-          </a>
+          </motion.a>
         </div>
 
         <section className='w-full h-full sm:h-auto flex flex-auto mt-5 lg:mt-10'>
@@ -200,7 +214,7 @@ const Projects = ({ projectsList }) => {
         </section>
 
         <FooterMenu />
-      </main>
+      </motion.main>
     </>
   );
 };

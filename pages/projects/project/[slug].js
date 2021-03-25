@@ -2,12 +2,17 @@ import fs from 'fs';
 import path from 'path';
 import Carousel from 'nuka-carousel';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 import Background from '../../../components/Background';
 import FooterMenu from '../../../components/FooterMenu';
 import Navbar from '../../../components/Navbar';
 import CodeButton from '../../../components/CodeButton';
 import LaunchButton from '../../../components/LaunchButton';
+import {
+  animationChildVariants,
+  animationParentVariants
+} from '../../../utils/animations';
 
 const Project = ({ project }) => {
   if (!project) return <div>not found</div>;
@@ -48,36 +53,59 @@ const Project = ({ project }) => {
           content='Projects of LF Verissimo, front-end developer.'
         />
       </Head>
-      <main className='w-full min-h-full flex flex-col items-center'>
+      <motion.main
+        initial='hidden'
+        animate='show'
+        variants={animationParentVariants}
+        className='w-full min-h-full flex flex-col items-center'
+      >
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between items-end px-4 sm:px-0'>
+        <motion.div
+          variants={animationChildVariants}
+          className='w-full max-w-screen-xl flex justify-between items-end px-4 sm:px-0'
+        >
           <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             PROJECTS
           </h1>
-        </div>
+        </motion.div>
 
         <section className='w-full max-w-screen-xl mb-20 sm:mb-0 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-0'>
           <div className='flex flex-col mt-6 mr-0 mb-10 sm:mb-0 sm:mr-5'>
-            <p className='font-pop font-light text-pink-theme text-xl sm:text-2xl'>
+            <motion.p
+              variants={animationChildVariants}
+              className='font-pop font-light text-pink-theme text-xl sm:text-2xl'
+            >
               {attributes.type}
-            </p>
-            <h2 className='font-pop font-bold text-white-theme text-2xl sm:text-4xl'>
+            </motion.p>
+            <motion.h2
+              variants={animationChildVariants}
+              className='font-pop font-bold text-white-theme text-2xl sm:text-4xl'
+            >
               {attributes.title}
-            </h2>
-            <p className='mt-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'>
+            </motion.h2>
+            <motion.p
+              variants={animationChildVariants}
+              className='mt-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'
+            >
               {attributes.desc}
-            </p>
-            <p className='mt-6 font-pop font-light text-white-theme text-xl sm:text-2xl'>
+            </motion.p>
+            <motion.p
+              variants={animationChildVariants}
+              className='mt-6 font-pop font-light text-white-theme text-xl sm:text-2xl'
+            >
               <strong className='font-bold'>Tech's</strong>
               <br />
               {attributes.tech}
-            </p>
+            </motion.p>
             {attributes.extra && (
               <>
-                <p className='my-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'>
+                <motion.p
+                  variants={animationChildVariants}
+                  className='my-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'
+                >
                   {attributes.extraInfo}
-                </p>
+                </motion.p>
 
                 <div
                   className='my-6 font-pop font-light text-gray-theme text-xl sm:text-2xl'
@@ -86,8 +114,10 @@ const Project = ({ project }) => {
               </>
             )}
 
-            <LaunchButton href={attributes.link} />
-            <CodeButton href={attributes.codeLink} />
+            <motion.div variants={animationChildVariants}>
+              <LaunchButton href={attributes.link} />
+              <CodeButton href={attributes.codeLink} />
+            </motion.div>
           </div>
 
           <Carousel
@@ -126,7 +156,7 @@ const Project = ({ project }) => {
         </section>
 
         <FooterMenu />
-      </main>
+      </motion.main>
     </>
   );
 };

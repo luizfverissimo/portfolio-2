@@ -1,9 +1,14 @@
 import React from 'react';
 import Head from 'next/head';
+import { motion } from 'framer-motion';
 
 import Background from '../components/Background';
 import FooterMenu from '../components/FooterMenu';
 import Navbar from '../components/Navbar';
+import {
+  animationChildVariants,
+  animationParentVariants
+} from '../utils/animations';
 
 function About() {
   return (
@@ -41,36 +46,68 @@ function About() {
         />
       </Head>
 
-      <main className='w-full min-h-full flex flex-col items-center'>
+      <motion.main
+        initial='hidden'
+        animate='show'
+        variants={animationParentVariants}
+        className='w-full min-h-full flex flex-col items-center'
+      >
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex justify-between px-4 xl:px-0'>
+        <motion.div
+          variants={animationChildVariants}
+          className='w-full max-w-screen-xl flex justify-between px-4 xl:px-0'
+        >
           <h1 className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'>
             ABOUT
           </h1>
-        </div>
+        </motion.div>
         <section className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-between px-4 xl:px-0'>
           <div className='w-full sm:w-1/2 flex flex-col items-start mt-12'>
-            <h2 className='font-pop text-2xl sm:text-3xl text-white-theme'>
+            <motion.h2
+              variants={animationChildVariants}
+              className='font-pop text-2xl sm:text-3xl text-white-theme'
+            >
               Hi, my name is <strong>Luiz Fernando Verissimo</strong>,
-            </h2>
-            <p className='font-pop font-light text-2xl sm:text-3xl text-gray-theme mt-6'>
+            </motion.h2>
+            <motion.p
+              variants={animationChildVariants}
+              className='font-pop font-light text-2xl sm:text-3xl text-gray-theme mt-6'
+            >
               I’m a self-taught front-end JavaScript developer, a geek developer
               exploring programming dungeons!
-            </p>
-            <p className='font-pop text-2xl text-white-theme mt-6'>
-              I am currently an front-end developer intern at the <a className="underline hover:text-pink-theme" href="https://mandarin.com.br" rel="external" target="_blank" rel="noopener">Mandarin agency</a>
-            </p>
-            <h3 className='font-pop font-bold text-2xl sm:text-3xl text-pink-theme mt-12'>
+            </motion.p>
+            <motion.p
+              variants={animationChildVariants}
+              className='font-pop text-2xl text-white-theme mt-6'
+            >
+              I am currently an front-end developer intern at the{' '}
+              <a
+                className='underline hover:text-pink-theme'
+                href='https://mandarin.com.br'
+                rel='external'
+                target='_blank'
+                rel='noopener'
+              >
+                Mandarin agency
+              </a>
+            </motion.p>
+            <motion.h3
+              variants={animationChildVariants}
+              className='font-pop font-bold text-2xl sm:text-3xl text-pink-theme mt-12'
+            >
               What can I do for you?
-            </h3>
-            <ul className='font-pop font-bold text-xl sm:text-2xl text-white-theme ml-4 mt-4'>
+            </motion.h3>
+            <motion.ul
+              variants={animationChildVariants}
+              className='font-pop font-bold text-xl sm:text-2xl text-white-theme ml-4 mt-4'
+            >
               <li>Fullstack projects (CRUD)</li>
               <li>Mobile apps</li>
               <li>Websites</li>
               <li>Landing pages</li>
               <li>E-mail template</li>
-            </ul>
+            </motion.ul>
           </div>
           <div className='w-full sm:w-1/2 flex flex-col items-end mt-12 mb-20 sm:mb-0'>
             <img src='/avatar.jpg' alt='LF Verissimo avatar' />
@@ -82,7 +119,7 @@ function About() {
           </div>
         </section>
         <FooterMenu />
-      </main>
+      </motion.main>
     </>
   );
 }
