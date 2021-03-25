@@ -77,7 +77,7 @@ const Projects = ({ projectsList }) => {
       >
         <Background />
         <Navbar />
-        <div className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-between items-end px-4 xl:px-0 '>
+        <div className='w-full max-w-screen-xl flex flex-col sm:flex-row justify-start sm:justify-between items-start sm:items-end px-4 xl:px-0 '>
           <motion.h1
             variants={animationChildVariants}
             className='chromatic font-pop font-bold text-white-theme text-6xl sm:text-8xl'
@@ -174,7 +174,7 @@ const Projects = ({ projectsList }) => {
                 return (
                   <article
                     key={index}
-                    className='w-full bg-black-theme h-auto p-4 my-5 sm:p-8 border rounded-xl border-gray-theme flex flex-col items-start justify-between relative shadow-2xl'
+                    className='w-full bg-black-theme h-auto p-8 my-5 border rounded-xl border-gray-theme flex flex-col items-start justify-between relative shadow-2xl'
                   >
                     <div className='w-full flex flex-col'>
                       <h3 className='w-full font-pop font-light text-pink-theme text-lg sm:text-xl'>
