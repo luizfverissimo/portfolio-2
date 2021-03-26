@@ -91,7 +91,7 @@ const Project = ({ project }) => {
         </motion.div>
 
         <section className='w-full max-w-screen-xl mb-20 sm:mb-0 flex flex-col sm:flex-row justify-between items-center px-4 sm:px-0'>
-          <div className='flex flex-col mt-6 mr-0 mb-10 sm:mb-0 sm:mr-5'>
+          <div className='w-full sm:w-1/2 flex flex-col mt-6 mr-0 mb-10 sm:mb-0 sm:mr-5'>
             <motion.p
               variants={animationChildVariants}
               className='font-pop font-light text-pink-theme text-xl sm:text-2xl'
@@ -140,6 +140,7 @@ const Project = ({ project }) => {
             </motion.div>
           </div>
 
+            <div className="w-full sm:w-1/2">
             <Carousel
               defaultControlsConfig={{
                 nextButtonStyle: {
@@ -162,7 +163,7 @@ const Project = ({ project }) => {
               }}
               autoplay
               wrapAround
-              initialSlideHeight={10}
+              
             >
               {attributes.images.map((image, index) => {
                 return (
@@ -174,6 +175,7 @@ const Project = ({ project }) => {
                 );
               })}
             </Carousel>
+            </div>
         </section>
 
         <FooterMenu />
