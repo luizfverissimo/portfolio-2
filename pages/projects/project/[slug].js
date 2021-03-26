@@ -41,9 +41,9 @@ const Project = ({ project }) => {
           href='/favicon-16x16.png'
         />
         <link rel='manifest' href='/site.webmanifest' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
-        <meta name='msapplication-TileColor' content='#da532c' />
-        <meta name='theme-color' content='#ffffff'></meta>
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#1c1c1c' />
+        <meta name='msapplication-TileColor' content='#1c1c1c' />
+        <meta name='theme-color' content='#1c1c1c'></meta>
         <meta
           name='description'
           content='Projects of LF Verissimo, front-end developer.'
@@ -140,39 +140,40 @@ const Project = ({ project }) => {
             </motion.div>
           </div>
 
-          <Carousel
-            defaultControlsConfig={{
-              nextButtonStyle: {
-                fontFamily: 'Poppins',
-                fontWeight: 'bold',
-                borderRadius: '20px 0 0 20px',
-                outline: 0
-              },
-              nextButtonText: '>',
-              prevButtonStyle: {
-                fontFamily: 'Poppins',
-                fontWeight: 'bold',
-                borderRadius: '0 20px 20px 0',
-                outline: 0
-              },
-              prevButtonText: '<',
-              pagingDotsStyle: {
-                display: 'none'
-              }
-            }}
-            autoplay
-            wrapAround
-          >
-            {attributes.images.map((image, index) => {
-              return (
-                <img
-                  key={index}
-                  src={image}
-                  alt={`${attributes.title}-${index}`}
-                />
-              );
-            })}
-          </Carousel>
+            <Carousel
+              defaultControlsConfig={{
+                nextButtonStyle: {
+                  fontFamily: 'Poppins',
+                  fontWeight: 'bold',
+                  borderRadius: '20px 0 0 20px',
+                  outline: 0
+                },
+                nextButtonText: '>',
+                prevButtonStyle: {
+                  fontFamily: 'Poppins',
+                  fontWeight: 'bold',
+                  borderRadius: '0 20px 20px 0',
+                  outline: 0
+                },
+                prevButtonText: '<',
+                pagingDotsStyle: {
+                  display: 'none'
+                }
+              }}
+              autoplay
+              wrapAround
+              initialSlideHeight={10}
+            >
+              {attributes.images.map((image, index) => {
+                return (
+                  <img
+                    key={index}
+                    src={image}
+                    alt={`${attributes.title}-${index}`}
+                  />
+                );
+              })}
+            </Carousel>
         </section>
 
         <FooterMenu />

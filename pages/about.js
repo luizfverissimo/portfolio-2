@@ -33,9 +33,9 @@ function About() {
           href='/favicon-16x16.png'
         />
         <link rel='manifest' href='/site.webmanifest' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
-        <meta name='msapplication-TileColor' content='#da532c' />
-        <meta name='theme-color' content='#ffffff'></meta>
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#1c1c1c' />
+        <meta name='msapplication-TileColor' content='#1c1c1c' />
+        <meta name='theme-color' content='#1c1c1c'></meta>
         <meta
           name='description'
           content='About - LF Verissimo personal portfolio, front-end developer, solving problems through code.'
@@ -129,7 +129,7 @@ function About() {
               <li>E-mail template</li>
             </motion.ul>
           </div>
-          <div className='w-full sm:w-1/2 flex flex-col items-end mt-12 mb-20 sm:mb-0'>
+          <div className='w-full sm:w-1/2 flex flex-col items-center sm:items-end mt-12 mb-20 sm:mb-0'>
             <img src='/avatar.jpg' alt='LF Verissimo avatar' />
             <p className='w-full font-pop text-white-theme text-lg sm:text-xl text-center sm:text-right mt-6'>
               <strong>Based in:</strong>

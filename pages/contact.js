@@ -82,9 +82,9 @@ function Contact() {
           href='/favicon-16x16.png'
         />
         <link rel='manifest' href='/site.webmanifest' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#5bbad5' />
-        <meta name='msapplication-TileColor' content='#da532c' />
-        <meta name='theme-color' content='#ffffff'></meta>
+        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#1c1c1c' />
+        <meta name='msapplication-TileColor' content='#1c1c1c' />
+        <meta name='theme-color' content='#1c1c1c'></meta>
         <meta
           name='description'
           content='Contact LF Verissimo, front-end developer.'
@@ -166,7 +166,7 @@ function Contact() {
             ></textarea>
             <div className='w-full mt-4 flex flex-col items-center'>
               <p className='font-pop h-auto sm:h-5 text-lg sm:text-xl text-pink-theme'>{status}</p>
-              <div className='w-full mt-4 sm:mt-8 flex flex-col sm:flex-row justify-start sm:justify-between items-center '>
+              <div className='w-full outline-none mt-4 sm:mt-8 flex flex-col sm:flex-row justify-start sm:justify-between items-center '>
                 <ReCAPTCHA
                   sitekey={process.env.NEXT_PUBLIC_SITE_KEY}
                   onChange={recaptchaVerify}
@@ -175,7 +175,7 @@ function Contact() {
                 />
                 <button
                   onClick={handleSubmitContactForm}
-                  className='group flex outline-none mt-5 sm:mt-0 items-center font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1'
+                  className='group flex outline-none p-2 mt-5 sm:mt-0 items-center font-pop font-bold text-white-theme text-2xl transition-all transform hover:text-pink-theme hover:-translate-y-1'
                 >
                   <svg
                     className='mr-2 fill-current outline-none text-white-theme transition-all group-hover:text-pink-theme'
