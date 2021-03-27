@@ -1,6 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
 import Head from 'next/head';
-import Link from 'next/link';
 import ReCAPTCHA from 'react-google-recaptcha';
 import * as emailjs from 'emailjs-com';
 import { init } from 'emailjs-com';
@@ -64,55 +63,7 @@ function Contact() {
     <>
       <Head>
         <title>Contact - LF Verissimo | Front-end Developer</title>
-        <link
-          rel='apple-touch-icon'
-          sizes='180x180'
-          href='/apple-touch-icon.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='32x32'
-          href='/favicon-32x32.png'
-        />
-        <link
-          rel='icon'
-          type='image/png'
-          sizes='16x16'
-          href='/favicon-16x16.png'
-        />
-        <link rel='manifest' href='/site.webmanifest' />
-        <link rel='mask-icon' href='/safari-pinned-tab.svg' color='#1c1c1c' />
-        <meta name='msapplication-TileColor' content='#1c1c1c' />
-        <meta name='theme-color' content='#1c1c1c'></meta>
-        <meta
-          name='description'
-          content='Contact LF Verissimo, front-end developer.'
-        />
-        <meta name='robots' content='index, follow' />
-        <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
         <meta name='viewport' content='width=device-width, initial-scale=1' />
-
-        <meta name='twitter:card' value='summary'></meta>
-        <meta
-          name='twitter:image'
-          content='http://lfverissimo.com/twittermeta.png'
-        ></meta>
-
-        <meta
-          property='og:title'
-          content='LF Verissimo Portfolio | Front-end Developer'
-        />
-        <meta property='og:type' content='article' />
-        <meta property='og:url' content='http://lfverissimo.com/' />
-        <meta
-          property='og:image'
-          content='http://lfverissimo.com/twittermeta.png'
-        />
-        <meta
-          property='og:description'
-          content='Contact LF Verissimo, front-end developer.'
-        />
       </Head>
       <main className='w-full min-h-full flex flex-col items-center'>
         <Background />
@@ -126,7 +77,7 @@ function Contact() {
         <section className='w-full max-w-screen-xl flex justify-between items-center mb-20 sm:mb-0'>
           <div className='w-full px-4 xl:px-0 sm:w-1/2 flex flex-col items-start justify-start'>
             <label
-              for='Name'
+              htmlFor='Name'
               className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               Name
@@ -139,7 +90,7 @@ function Contact() {
               onChange={(e) => setName(e.target.value)}
             ></input>
             <label
-              for='Email'
+              htmlFor='Email'
               className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               E-mail
@@ -152,7 +103,7 @@ function Contact() {
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <label
-              for='Message'
+              htmlFor='Message'
               className='mt-4 sm:mt-8 font-pop font-bold text-xl sm:text-2xl text-white-theme'
             >
               Message
