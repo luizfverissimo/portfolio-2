@@ -2,7 +2,7 @@
 
 # Portfolio 💼
 <img align="center" alt="React" src="https://img.shields.io/badge/-React-2E2D2E?style=flat-square&labelColor=FD3A69&logo=react&logoColor=white" /><img align="center" alt="Next.js" src="https://img.shields.io/badge/-Next.js-2E2D2E?style=flat-square&labelColor=FD3A69&logo=next.js&logoColor=white" /><img align="center" alt="Tailwind CSS" src="https://img.shields.io/badge/-Tailwind%20CSS-2E2D2E?style=flat-square&labelColor=FD3A69&logo=tailwind-css&logoColor=white" /></br></br>
-Project created with *React* with *Next.js*, during Next LevelWeek #4.
+Project created with *React* with *Next.js* and *Tailwind CSS*.
 </br>
 ## [🚀 Click here to launch the Portfolio](https://lfverissimo.com/)
 </br>
