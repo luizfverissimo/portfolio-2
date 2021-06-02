@@ -33,10 +33,10 @@ export default class MyDocument extends Document {
           <meta name='robots' content='index, follow' />
           <meta httpEquiv='Content-Type' content='text/html; charset=utf-8' />
           <meta name='twitter:card' value='summary'></meta>
-          {/* <meta
+          <meta
             name='twitter:image'
-            content='http://lfverissimo.com/twittermeta.png'
-          ></meta> */}
+            content='http://lfverissimo.com/link-img.png'
+          ></meta>
 
           <meta
             property='og:title'
@@ -44,10 +44,10 @@ export default class MyDocument extends Document {
           />
           <meta property='og:type' content='article' />
           <meta property='og:url' content='http://lfverissimo.com/' />
-          {/* <meta
+          <meta
             property='og:image'
-            content='http://lfverissimo.com/twittermeta.png'
-          /> */}
+            content='http://lfverissimo.com/link-img.png'
+          />
           <meta
             property='og:description'
             content='LF Verissimo personal portfolio, front-end developer.'
