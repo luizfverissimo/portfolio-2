@@ -8,19 +8,3 @@ Project created with *React* with *Next.js* and *Tailwind CSS*.
 </br>
 
 <img src="/public/img/portfolio2/1.png" alt="1" width="300"/> <img src="/public/img/portfolio2/2.png" alt="2" width="300"/> <img src="/public/img/portfolio2/3.png" alt="3" width="300"/> <img src="/public/img/portfolio2/4.png" alt="4" width="300"/> <img src="/public/img/portfolio2/5.png" alt="5" width="300"/>
-
-## Getting Started
-
-Clone this repository:
-```bash
-git clone https://github.com/luizfverissimo/portfolio-2.git
-```
-
-Run:
-
-```bash
-yarn # or npm install
-yarn dev # or npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
